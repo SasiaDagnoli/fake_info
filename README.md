@@ -1,4 +1,4 @@
-# Fake Data Generator.
+# Fake Data Generator
 
 ## Purpose
 
