@@ -1,6 +1,7 @@
-# Fake Data Generator
+# Fake Data Generator.
 
 ## Purpose
+
 Sample PHP class that generates fake data of nonexistent Danish persons.
 
 ## Dependencies
@@ -36,6 +37,7 @@ print_r($fakeInfo->getFakePersons());
 ```
 
 Output
+
 ```php
 Array
 (
@@ -58,7 +60,9 @@ Array
 ```
 
 ## Tools
+
 PHP8 / MariaDB
 
 ## Author
+
 Arturo Mora-Rioja (amri@kea.dk)
