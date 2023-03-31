@@ -35,7 +35,8 @@ class PhoneNumberTest extends TestCase
     }
 
     // This also fails
-    // testing 1000 phone numbers -> adds them to array -> then using 'array_unique' to remove dublicates -> asserting that the number of unique phone numbers is aqual to number of tests
+    // testing 1000 phone numbers -> adds them to array,
+    // then using 'array_unique' to remove dublicates -> asserting that the number of unique phone numbers is aqual to number of tests
     public function testPhoneNumberIsUnique2()
     {
         $phoneNumbers = [];
