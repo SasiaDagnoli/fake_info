@@ -16,4 +16,4 @@ require_once 'src/Town.php';
 
 echo '<pre>';
 $fakeInfo = new FakeInfo;
-print_r($fakeInfo->getFakePersons());
+print_r($fakeInfo->getAddress());
