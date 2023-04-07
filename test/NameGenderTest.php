@@ -6,11 +6,13 @@ use PHPUnit\Framework\TestCase;
 
 class NameGenderTest extends TestCase {
 
+    private $fakeInfo;
+
     public function setUp(): void {
-		$this->Fakeinfo = new FakeInfo();
+		$this->Fakeinfo = new FakeInfo;
 	}
 
-	public function tearDown(): void {
+    public function tearDown(): void {
 		unset($this->Fakeinfo);
 	}
 

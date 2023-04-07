@@ -1,8 +1,6 @@
 <?php
 
-require_once 'src/DB.php';
 require_once 'src/FakeInfo.php';
-require_once 'src/Town.php';
 
 // getCPR();
 // getFullNameAndGender();
@@ -16,4 +14,4 @@ require_once 'src/Town.php';
 
 echo '<pre>';
 $fakeInfo = new FakeInfo;
-print_r($fakeInfo->getAddress());
+print_r($fakeInfo->getFakePerson());
