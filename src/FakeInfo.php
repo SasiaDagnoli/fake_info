@@ -35,7 +35,7 @@ class FakeInfo {
         $this->setFullNameAndGender();
         $this->setBirthDate();
         $this->setCpr();
-        $this->setAddress();
+        // $this->setAddress();
         $this->setPhone();
     }
     
