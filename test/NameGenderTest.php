@@ -16,14 +16,14 @@ class nameGenderTest extends TestCase
 	}
 
     public function testIsArray(){
-        $output = $this->fakeInfo->getFullNameAndGender();
-        $this->assertIsArray($output, 'The expected result is an array');
+        $array = $this->fakeInfo->getFullNameAndGender();
+        $this->assertIsArray($array, 'The expected result is an array');
     }
 
     public function testIsSame(){
-        $output1 = $this->fakeInfo->getFullNameAndGender();
-        $output2 = $this->fakeInfo->getFullNameAndGender();
-        $this->assertSame($output1, $output2, 'The expected result is the same');
+        $array1 = $this->fakeInfo->getFullNameAndGender();
+        $array2 = $this->fakeInfo->getFullNameAndGender();
+        $this->assertSame($array1, $array2, 'The expected result is the same');
     }
 
     public function testArrayHasKeyFirstname(){
@@ -42,6 +42,12 @@ class nameGenderTest extends TestCase
         $value = 'gender';
         $array = $this->fakeInfo->getFullNameAndGender();
         $this->assertArrayHasKey($value, $array, "The expected result is array contains {$value}");
+    } 
+
+    public function testArrayLengthIs3(){
+        $expectedLength = 3;
+        $array = $this->fakeInfo->getFullNameAndGender();
+        $this->assertCount($expectedLength, $array, "The expected result is array has a length of {$expectedLength}");
     } 
 
 }
