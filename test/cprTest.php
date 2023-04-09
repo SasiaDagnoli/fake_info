@@ -50,10 +50,4 @@ class cprTest extends TestCase
         $this->assertLessThanOrEqual($maxNumer, $result, "The expected result is lower than {$maxNumer}");
     }
 
-   /*  public function testCprLastValueIsEven(){
-        $expectedResult = 0;
-        $result = ((int) substr($this->fakeInfo->getCpr(), 9, 1)) % 2;
-        $this->assertSame($expectedResult, $result, "The expected result is last number is even");
-    } */
-
 }
