@@ -26,6 +26,12 @@ class cprTest extends TestCase
         $this->assertEquals($expectedLength, strlen($result), "The expected result is length of {$expectedLength}");
     }
 
+    public function testCprOnlyContainsDigits(){
+        $regularExpresion = '/^[0-9]*$/';
+        $result = $this->fakeInfo->getCpr();
+        $this->assertMatchesRegularExpression($regularExpresion, $result, "The expected result only contains digits");
+    }
+
     public function testCprDateDay(){
         $maxNumer = 31;
         $result = substr($this->fakeInfo->getCpr(), 0, 2);
