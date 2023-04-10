@@ -44,6 +44,21 @@ class nameGenderTest extends TestCase
         $this->assertArrayHasKey($value, $array, "The expected result is array contains {$value}");
     } 
 
+    public function testFirstnameIsAString(){
+        $value = $this->fakeInfo->getFullNameAndGender()['firstName'];
+        $this->assertIsString($value, 'The expected result is firstName is a string');
+    }
+    
+    public function testLastnameIsAString(){
+        $value = $this->fakeInfo->getFullNameAndGender()['lastName'];
+        $this->assertIsString($value, 'The expected result is lastName is a string');
+    }
+
+    public function tesGenderIsAString(){
+        $value = $this->fakeInfo->getFullNameAndGender()['gender'];
+        $this->assertIsString($value, 'The expected result is gender is a string');
+    }
+
     public function testArrayLengthIs3(){
         $expectedLength = 3;
         $array = $this->fakeInfo->getFullNameAndGender();
