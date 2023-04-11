@@ -33,11 +33,11 @@ class FakeInfo
 
     public function __construct()
     {
-        /*   $this->setFullNameAndGender(); */
+        $this->setFullNameAndGender();
         $this->setBirthDate();
-        /*        $this->setCpr();
-    $this->setAddress();
-    $this->setPhone(); */
+        $this->setCpr();
+        $this->setAddress();
+        $this->setPhone();
     }
 
     /**
@@ -234,9 +234,9 @@ class FakeInfo
     public function getFullNameGenderAndBirthDate(): array
     {
         return [
-/*             'firstName' => $this->firstName,
-'lastName' => $this->lastName,
-'gender' => $this->gender, */
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'gender' => $this->gender,
             'birthDate' => $this->birthDate,
         ];
     }
