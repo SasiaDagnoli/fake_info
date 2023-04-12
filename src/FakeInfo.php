@@ -20,7 +20,7 @@ class FakeInfo
         '441', '462', '466', '468', '472', '474', '476', '478', '485', '486', '488', '489', '493', '494', '495',
         '496', '498', '499', '542', '543', '545', '551', '552', '556', '571', '572', '573', '574', '577', '579',
         '584', '586', '587', '589', '597', '598', '627', '629', '641', '649', '658', '662', '663', '664', '665',
-        '667', '692', '693', '694', '697', '771', '772', '782', '783', '785', '786', '788', '789', '826', '827', '829',
+        '667', '692', '693', '694', '697', '771', '772', '782', '783', '785', '786', '788', '789', '826', '827', '829'
     ];
 
     private string $cpr;
@@ -170,7 +170,11 @@ class FakeInfo
             ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
             'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
             'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+<<<<<<< HEAD
             'Y', 'Z',
+=======
+            'Y', 'Z'
+>>>>>>> origin/phone-number
         ];
         if ($includeDanishCharacters) {
             $validCharacters = array_merge($validCharacters, ['æ', 'ø', 'å', 'Æ', 'Ø', 'Å']);
@@ -289,6 +293,7 @@ class FakeInfo
      */
     public function getPhoneNumber(): string
     {
+        var_dump('Generating phone number');
         return $this->phone;
     }
 
@@ -306,7 +311,11 @@ class FakeInfo
             'gender' => $this->gender,
             'birthDate' => $this->birthDate,
             'address' => $this->address,
+<<<<<<< HEAD
             'phoneNumber' => $this->phone,
+=======
+            'phoneNumber' => $this->phone
+>>>>>>> origin/phone-number
         ];
     }
 
@@ -318,8 +327,17 @@ class FakeInfo
      */
     public function getFakePersons(int $amount = 2): array
     {
+<<<<<<< HEAD
         if ($amount < 2) {$amount = 2;}
         if ($amount > 200) {$amount = 200;}
+=======
+        if ($amount < 2) {
+            $amount = 2;
+        }
+        if ($amount > 200) {
+            $amount = 200;
+        }
+>>>>>>> origin/phone-number
 
         for ($index = 0; $index < $amount; $index++) {
             $fakeInfo = new FakeInfo;
