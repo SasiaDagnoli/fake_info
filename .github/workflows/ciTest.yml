@@ -10,7 +10,7 @@ jobs:
 
       - name: Create test database
         run: |
-          sudo mysql -uroot -proot < ./db/addresses.sql
+          sudo mysql -uroot -proot < ../db/addresses.sql
 
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
