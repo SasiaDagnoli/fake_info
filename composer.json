@@ -2,6 +2,7 @@
     "name": "test/fake_info_test",
     "license": "Unlicense",
     "type": "project",
+    "description": "Fake info test project",
     "autoload": {
         "psr-4": {
             "Test\\FakeInfoTest\\": "src/"
