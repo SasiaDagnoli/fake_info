@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create test database
-        run: sudo mysql -uroot -proot < db/addresses.sql
+        run: sudo mysql -uroot -proot < ./db/addresses.sql start
 
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
