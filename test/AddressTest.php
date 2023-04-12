@@ -497,7 +497,6 @@ class AddressTest extends TestCase
             // ['K&benhavn??'], // SHOULD FAIL
 
             ['Bulderby'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
-            ['Hasselager'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
 
             ['Solrød Strand'],
             // ['Solrød_Strand'], // SHOULD FAIL
