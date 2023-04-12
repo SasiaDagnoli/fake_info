@@ -1,5 +1,12 @@
 .DS_Store
+<<<<<<< HEAD
 /vendor/
 Info.php
 index.php
 
+=======
+index.php
+info.php
+/src/
+/vendor/
+>>>>>>> addresses
