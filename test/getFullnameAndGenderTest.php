@@ -4,7 +4,7 @@ require_once 'src/FakeInfo.php';
 
 use PHPUnit\Framework\TestCase;
 
-class nameGenderTest extends TestCase 
+class getFullnameAndGenderTest extends TestCase 
 {
     public function setUp(): void {
 		$this->fakeInfo = new FakeInfo();
@@ -58,21 +58,9 @@ class nameGenderTest extends TestCase
         $this->assertIsString($value, 'The expected result is gender is a string');
     }
 
-    public function testIsSame(){
-        $array1 = $this->fakeInfo->getFullNameAndGender();
-        $array2 = $this->fakeInfo->getFullNameAndGender();
-        $this->assertSame($array1, $array2, 'The expected result is the same');
+    public function testGenderIsFemaleOrMale(){
+        $gender = $this->fakeInfo->getCprFullNameAndGender()['gender'];
+        $expectedResult = array('female', 'male');
+        $this->assertContains($gender, $expectedResult, "The expected result is male or female");
     }
-
-   /*  public function testGenderIsFemale(){
-        $gender = $this->fakeInfo->getFullNameAndGender()["gender"];
-        $expectedResult = 'female';
-        $this->assertSame($gender, $expectedResult, "The expected result is true/female");
-    }
-
-    public function testGenderIsMale(){
-        $gender = $this->fakeInfo->getFullNameAndGender()["gender"];
-        $expectedResult = 'male';
-        $this->assertSame($gender, $expectedResult, "The expected result is true/male");
-    } */
 }

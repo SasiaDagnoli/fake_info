@@ -4,7 +4,7 @@ require_once 'src/FakeInfo.php';
 
 use PHPUnit\Framework\TestCase;
 
-class cprTest extends TestCase 
+class getCprTest extends TestCase 
 {
 
     public function setUp(): void {
