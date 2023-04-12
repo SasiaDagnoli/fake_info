@@ -1,6 +1,5 @@
 name: Composer validation and unit test execution
-run: |
-  sudo mysql -uroot -proot < db/addresses.sql
+run: sudo mysql -uroot -proot < db/addresses.sql
 on: [push]
 jobs:
   build:
