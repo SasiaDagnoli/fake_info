@@ -1,4 +1,4 @@
 .DS_Store
 /vendor/
-Info.php
+info/Info.php
 index.php
