@@ -4,7 +4,7 @@ require_once 'src/FakeInfo.php';
 
 use PHPUnit\Framework\TestCase;
 
-class cprNameGenderTest extends TestCase 
+class getCprFullnameAndGenderTest extends TestCase 
 {
 
     public function setUp(): void {
@@ -16,7 +16,7 @@ class cprNameGenderTest extends TestCase
 	}
 
     public function testGenderIsFemaleOrMale(){
-        $gender = $this->fakeInfo->getFullNameAndGender()["gender"];
+        $gender = $this->fakeInfo->getCprFullNameAndGender()["gender"];
         $expectedResult = array('female', 'male');
         $this->assertContains($gender, $expectedResult, "The expected result is male or female");
     }
