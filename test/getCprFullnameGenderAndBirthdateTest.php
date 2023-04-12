@@ -62,5 +62,4 @@ class getCprFullnameGenderAndBirthdateTest extends TestCase
         $cpr = substr($this->fakeInfo->getCprFullNameGenderAndBirthDate()['CPR'], 0, 6);
         $this->assertSame($birthdate, $cpr, 'The expected result is birthdate matches cpr');
     } 
-
 }
