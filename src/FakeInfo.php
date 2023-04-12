@@ -23,13 +23,13 @@ class FakeInfo
         '667', '692', '693', '694', '697', '771', '772', '782', '783', '785', '786', '788', '789', '826', '827', '829',
     ];
 
-    stringprivate $cpr;
-    stringprivate $firstName;
-    stringprivate $lastName;
-    stringprivate $gender;
-    stringprivate $birthDate;
-    arrayprivate $address = [];
-    stringprivate $phone;
+    private string $cpr;
+    private string $firstName;
+    private string $lastName;
+    private string $gender;
+    private string $birthDate;
+    private array $address = [];
+    private string $phone;
 
     public function __construct()
     {
