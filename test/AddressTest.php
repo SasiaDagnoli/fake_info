@@ -476,10 +476,44 @@ class AddressTest extends TestCase
     
     // TOWN_NAME
 
+    public function testDBTownNameHasCorrectFormat(): void
+    {
+        $town_name = $this->fakeInfo->getAddress()['address']['town_name'];
+        $this->assertMatchesRegularExpression("/^([a-zA-ZÆØÅæøå][a-zA-ZÆØÅæøå ]+)$/", $town_name, "The town_name value '{$town_name}' does not match regex.");
+    }
+
+    /**
+     * @dataProvider provideTownNameHasCorrectFormat
+     */
+    public function testTownNameHasCorrectFormat($town_name): void
+    {
+        $this->assertMatchesRegularExpression("/^([a-zA-ZÆØÅæøå][a-zA-ZÆØÅæøå ]+)$/", $town_name, "The town_name value '{$town_name}' does not match regex.");
+    }
+    public static function provideTownNameHasCorrectFormat()
+    {
+        return [
+            ['København K'],
+            // ['Køb3nhavn K'], // SHOULD FAIL
+            // ['K&benhavn??'], // SHOULD FAIL
+
+            ['Bulderby'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
+            ['Hasselager'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
+
+            ['Solrød Strand'],
+            // ['Solrød_Strand'], // SHOULD FAIL
+            ['New York'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
+
+            ['Gislinge'],
+            // ['G1slinge'], // SHOULD FAIL
+            ['Tokyo'], // SHOULD FAIL, BUT PASSES AS CANNOT VERIFY IF IN DB
+            // ['T0kyo'], // SHOULD FAIL
+        ];
+    }
+
+
     // NOT SURE HOW TO SOLVE THIS ONE W/O GOING THROUGH EACH AND EVERY VALUE IN THE DB,
     // AS IT DEPENDS ON THE RANDOM TOWN_VALUE RETURNED, WITH MANY DIFFERENT FORMATS, ETC.
-    // PERHAPS WE HAVE TO DO MOCKING FOR THIS ONE? (AND POSSIBLY ALSO POSTAL_CODE, REALISTICALLY).
+    // PERHAPS WE HAVE TO DO MOCKING FOR THIS ONE (AND POSTAL_CODE)?
     // WHEN DOES IT TURN INTO AN INTEGRATION TEST VS. A UNIT TEST?
-    // > PROBABLY THIS IS THE INTEGRATION TEST 'PART' OF THE PROJECT.
 
 }
