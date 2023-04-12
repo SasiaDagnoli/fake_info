@@ -23,13 +23,13 @@ class FakeInfo
         '667', '692', '693', '694', '697', '771', '772', '782', '783', '785', '786', '788', '789', '826', '827', '829',
     ];
 
-    stringprivate $cpr;
-    stringprivate $firstName;
-    stringprivate $lastName;
-    stringprivate $gender;
-    stringprivate $birthDate;
-    arrayprivate $address = [];
-    stringprivate $phone;
+    string private $cpr;
+    string private $firstName;
+    string private $lastName;
+    string private $gender;
+    string private $birthDate;
+    array private $address = [];
+    string private $phone;
 
     public function __construct()
     {
@@ -242,7 +242,7 @@ class FakeInfo
     }
 
     /**
-     * Returns aa fake CPR, full name, and gender
+     * Returns a fake CPR, full name, and gender
      *
      * @return array ['CPR' => value, 'firstName' => value, 'lastName' => value, 'gender' => 'female' | 'male']
      */
