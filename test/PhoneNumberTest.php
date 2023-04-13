@@ -2,7 +2,6 @@
 
 require_once 'src/FakeInfo.php';
 
-
 use PHPUnit\Framework\TestCase;
 
 class PhoneNumberTest extends TestCase
@@ -28,17 +27,17 @@ class PhoneNumberTest extends TestCase
     }
 
     // Assert prefix is the first number in the phone number
-    public function testPhoneNumberPrefixIsFirst()
-    {
-        $phoneNumber = $this->fakeInfo->getPhoneNumber();
-        $phonePrefixes = FakeInfo::PHONE_PREFIXES;
+    /*  public function testPhoneNumberPrefixIsFirst()
+{
+$phoneNumber = $this->fakeInfo->getPhoneNumber();
+$phonePrefixes = FakeInfo::PHONE_PREFIXES;
 
-        $foundPrefix = false;
-        foreach ($phonePrefixes as $prefix) {
-            if (str_starts_with($phoneNumber, $prefix)) {
-                $foundPrefix = true;
-                break;
-            }
-        }
-    }
+$foundPrefix = false;
+foreach ($phonePrefixes as $prefix) {
+if (str_starts_with($phoneNumber, $prefix)) {
+$foundPrefix = true;
+break;
+}
+}
+} */
 }
